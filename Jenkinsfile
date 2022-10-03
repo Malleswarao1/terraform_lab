@@ -7,7 +7,7 @@ pipeline{
         
         stage('git checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/vikash-kumar01/terraform_lab.git'
+                git branch: 'main', credentialsId: 'jenkinspipeline', url: 'https://github.com/Malleswarao1/terraform_lab.git'
             }
         }
         stage('terraform init'){
